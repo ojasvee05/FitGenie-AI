@@ -101,6 +101,21 @@ def calculate():
     else:
         sleep = "😴 Maintain 7-8 hours of sleep daily."
 
+# Health Score
+    score = 100
+
+    if bmi < 18.5 or bmi > 25:
+        score -= 20
+
+    if goal == "Weight Loss":
+        score -= 5
+
+    if water_litre < 2:
+        score -= 5
+
+    if score < 0:
+        score = 0
+
     # BMI Category
     if bmi < 18.5:
         category = "Underweight"
@@ -120,7 +135,8 @@ def calculate():
         calories=calories,
         diet=diet,
         workout=workout,
-        sleep=sleep
+        sleep=sleep, 
+        score=score
     )
 
 
