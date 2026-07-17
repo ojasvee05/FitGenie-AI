@@ -7,33 +7,35 @@
 
 <body>
 
+<body>
+
+<div class="container">
+
 <h1>🏋️ FitGenie AI</h1>
 <h2>Your Personal AI Fitness Assistant</h2>
 
 <form action="/calculate" method="POST">
 
-<label>Name</label><br>
-<input type="text"  name="name"placeholder="Enter your name" required><br><br>
+<label>Name</label>
+<input type="text" name="name" placeholder="Enter your name" required>
 
-<label>Age</label><br>
-<input type="number" name="age" placeholder="Enter your age"><br><br>
+<label>Age</label>
+<input type="number" name="age" placeholder="Enter your age" required>
 
-<label>Height (cm)</label><br>
-<input type="number" name="height" placeholder="Enter your height"><br><br>
+<label>Height (cm)</label>
+<input type="number" name="height" placeholder="Enter your height" required>
 
-<label>Weight (kg)</label><br>
-<input type="number" name="weight"placeholder="Enter your weight"><br><br>
+<label>Weight (kg)</label>
+<input type="number" name="weight" placeholder="Enter your weight" required>
 
-<label>Gender</label><br>
+<label>Gender</label>
 
 <select name="gender">
 <option>Male</option>
 <option>Female</option>
 </select>
 
-<br><br>
-
-<label>Fitness Goal</label><br>
+<label>Fitness Goal</label>
 
 <select name="goal">
 <option>Weight Loss</option>
@@ -41,13 +43,12 @@
 <option>Maintain Weight</option>
 </select>
 
-<br><br>
-
 <button type="submit">Generate Fitness Plan</button>
 
 </form>
 
+</div>
+
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
-</html>
