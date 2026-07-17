@@ -19,6 +19,26 @@
     <h2>{{category}}</h2>
 
     <h3>💧Recommended water Intake: {{ water}} Litres/day</h3>
+    <h3>🔥Recommended Daily Calories: {{ calories }}</h3>
+    <h2>🥗 AI Diet Recommendation</h2>
+
+<ul>
+    {% for meal in diet %}
+        <li>{{ meal }}</li>
+    {% endfor %}
+</ul>
+
+<h2>🏋️ Workout Recommendation</h2>
+
+<ul>
+    {% for exercise in workout %}
+        <li>{{ exercise }}</li>
+    {% endfor %}
+</ul>
+
+<h2>😴 Sleep Recommendation</h2>
+<p>{{ sleep }}</p>
+
 <a href="/">Go Back</a>
 
 </body>
