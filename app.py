@@ -18,6 +18,8 @@ def calculate():
     height = height / 100
     bmi = weight / (height * height)
     bmi = round(bmi, 2)
+    water_ml = weight *35
+    water_litre = round(water_ml /1000, 1)
 
     if bmi < 18.5:
         category = "Underweight"
@@ -35,7 +37,8 @@ def calculate():
         "result.html",
         name=name,
         bmi=bmi,
-        category=category
+        category=category, 
+        water=water_litre
     )
 
 if __name__ == "__main__":
