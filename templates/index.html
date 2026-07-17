@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FitGenie AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<h1>🏋️ FitGenie AI</h1>
+<h2>Your Personal AI Fitness Assistant</h2>
+
+<form action="/calculate" method="POST">
+
+<label>Name</label><br>
+<input type="text"  name="name"placeholder="Enter your name" required><br><br>
+
+<label>Age</label><br>
+<input type="number" placeholder="Enter your age"><br><br>
+
+<label>Height (cm)</label><br>
+<input type="number" name="height" placeholder="Enter your height"><br><br>
+
+<label>Weight (kg)</label><br>
+<input type="number" name="weight"placeholder="Enter your weight"><br><br>
+
+<label>Gender</label><br>
+
+<select>
+<option>Male</option>
+<option>Female</option>
+</select>
+
+<br><br>
+
+<label>Fitness Goal</label><br>
+
+<select>
+<option>Weight Loss</option>
+<option>Weight Gain</option>
+<option>Maintain Weight</option>
+</select>
+
+<br><br>
+
+<button type="submit">Generate Fitness Plan</button>
+
+</form>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
